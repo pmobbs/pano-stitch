@@ -75,7 +75,7 @@ pip install numpy matplotlib pandas scipy scikit-image ipython notebook
 
 3. **Install dependencies**
    ```bash
-   pip install numpy matplotlib pandas scipy scikit-image ipython notebook
+   pip install -r requirements.txt
    ```
 
 4. **Launch Jupyter**
@@ -84,6 +84,14 @@ pip install numpy matplotlib pandas scipy scikit-image ipython notebook
    ```
 
 5. **Run notebook cells top-to-bottom** to reproduce the stitching pipeline.
+
+6. **Run the CLI stitcher directly on images**
+   ```bash
+   python stitch_images.py DS/1/A.tif DS/1/B.tif DS/1/C.tif DS/1/D.tif -o stitched.tif
+   ```
+   Optional flags:
+   - `--tile-factor 4` controls candidate template tiling density.
+   - `--background 255` controls empty canvas fill value.
 
 ---
 
